@@ -1,0 +1,64 @@
+name: Suggest a game
+description: Suggest a game for Syntax Arcade
+title: "Suggest: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Please check the [rules](https://github.com/syntax-arcade/games#the-rule) first. If you're unsure whether the game fits, suggest it anyway and say why.
+  - type: input
+    id: name
+    attributes:
+      label: Game name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Store page or the game's own site.
+      placeholder: https://store.steampowered.com/app/...
+    validations:
+      required: true
+  - type: textarea
+    id: how-you-code
+    attributes:
+      label: How do you write code in this game?
+      description: For example the language you use, what your code controls, and how much of the game is spent coding.
+    validations:
+      required: true
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Category
+      description: Pick any that fit.
+      multiple: true
+      options:
+        - Code puzzlers
+        - Automation and optimization sims
+        - Competitive bot programming
+        - Hacker fiction with real scripting
+        - World-hackers
+        - Learn-to-code games
+        - Build-a-computer
+        - Action and hybrid
+        - Not sure
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Free or paid?
+      options:
+        - Free
+        - Paid
+        - Not sure
+  - type: input
+    id: platforms
+    attributes:
+      label: Platforms
+      placeholder: Browser, Windows, macOS, Linux, iOS, Android, Switch, ...
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: For example why it might be borderline, or other games it is similar to.
